@@ -24,4 +24,6 @@ Route::get('/dashboard', function () {
 
 Route::resource('/task',TasksController::class)->middleware(['auth']);
 
+Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class);
+
 require __DIR__.'/auth.php';
